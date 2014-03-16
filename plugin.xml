@@ -11,16 +11,16 @@
     <js-module src="www/bluetoothle.js" name="BluetoothLe">
         <clobbers target="window.bluetoothle" />
     </js-module>
-    
+
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BluetoothLePlugin">
                 <param name="android-package" value="com.randdusing.bluetoothle.BluetoothLePlugin" />
             </feature>
         </config-file>
-        
+
         <source-file src="src/android/BluetoothLePlugin.java" target-dir="src/com/randdusing/bluetoothle" />
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.BLUETOOTH"/>
             <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
@@ -31,10 +31,18 @@
             <feature name="BluetoothLePlugin">
                 <param name="ios-package" value="BluetoothLePlugin" />
             </feature>
+            <feature name="BLEPeripheralManger">
+                <param name="ios-package" value="BLEPeripheralManger" />
+            </feature>
         </config-file>
         <header-file src="src/ios/BluetoothLePlugin.h" />
         <source-file src="src/ios/BluetoothLePlugin.m" />
+        <header-file src="src/ios/BLEPeripheralManger.h" />
+        <source-file src="src/ios/BLEPeripheralManger.m" />
         <framework src="CoreBluetooth.framework" />
+        <js-module src="www/ble-peripheral-manager.js" name="BLEPeripheralManager">
+            <clobbers target="window.BLEPeripheralManager" />
+        </js-module>
     </platform>
     <info>For more info: http://randdusing.com/</info>
 </plugin>
