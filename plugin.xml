@@ -31,14 +31,14 @@
             <feature name="BluetoothLePlugin">
                 <param name="ios-package" value="BluetoothLePlugin" />
             </feature>
-            <feature name="BLEPeripheralManger">
-                <param name="ios-package" value="BLEPeripheralManger" />
+            <feature name="BLEPeripheralManager">
+                <param name="ios-package" value="BLEPeripheralManager" />
             </feature>
         </config-file>
         <header-file src="src/ios/BluetoothLePlugin.h" />
         <source-file src="src/ios/BluetoothLePlugin.m" />
-        <header-file src="src/ios/BLEPeripheralManger.h" />
-        <source-file src="src/ios/BLEPeripheralManger.m" />
+        <header-file src="src/ios/BLEPeripheralManager.h" />
+        <source-file src="src/ios/BLEPeripheralManager.m" />
         <framework src="CoreBluetooth.framework" />
         <js-module src="www/ble-peripheral-manager.js" name="BLEPeripheralManager">
             <clobbers target="window.BLEPeripheralManager" />
